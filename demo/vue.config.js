@@ -10,7 +10,9 @@ module.exports = {
             threshold: 10240, // 对超过10k的数据压缩
             deleteOriginalAssets: false // 不删除源文件
           }),
-          new BundleAnalyzerPlugin()
+          new BundleAnalyzerPlugin({
+            generateStatsFile: true // 是否生成stats.json
+          })
         ]
       }
     }
